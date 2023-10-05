@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body style= "background-color:grey;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+        }
+        .merchant-code {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
+    <div class="container">
+        <h1>MERCHANT CODE</h1>
+        <p class="merchant-code" id="merchantCode">5541</p>
+    </div>
+
+    <script>
+       
+     
+        const merchantCodeElement = document.getElementById('merchantCode');
+        merchantCodeElement.textContent = generateMerchantCode();
+
+        function generateMerchantCode() {
+           
+            return "5541";
+        }
+    </script>
+<p><p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+<body>
+    <div class="container">
+        <h1>Online Payment</h1>
+        <form id="paymentForm">
+            <label for="merchantCode">Enter Merchant Code:</label>
+            <input type="text" id="merchantCode" name="merchantCode" required>
+			<label for="orderNumber">Enter Order Number:</label>
+			  <input type="text" id="orderNumber" name="orderNumber" required>
+          
+            
+            <h2>Select Payment Method</h2>
+            <div class="payment-option">
+                <input type="radio" id="mtnMoney" name="paymentMethod" value="mtnMoney">
+                <label for="mtnMoney">MTN Mobile Money</label>
+            </div>
+            <div class="payment-option">
+                <input type="radio" id="airtelMoney" name="paymentMethod" value="airtelMoney">
+                <label for="airtelMoney">Airtel Money</label>
+            </div>
+            
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const merchantCode = document.getElementById('merchantCode').value;
+			 const orderNumber = document.getElementById('orderNumber').value;
+            const selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+            
+            if (selectedPaymentMethod) {
+                const paymentMethod = selectedPaymentMethod.value;
+                alert(`Merchant Code: ${merchantCode}\nSelected Payment Method: ${paymentMethod}`);
+                // Here, you can proceed with the actual payment processing using the selected method.
+            } else {
+                alert('Please select a payment method.');
+            }
+        });
+    </script>
+</body>
+</html>
